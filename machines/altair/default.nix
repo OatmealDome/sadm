@@ -13,7 +13,12 @@ in {
 
   services.openssh.enable = true;
   services.openssh.permitRootLogin = "prohibit-password";
-  users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII3tjB4KYDok3KlWxdBp/yEmqhhmybd+w0VO4xUwLKKV" ];
+  users.users.root.openssh.authorizedKeys.keys = [
+    # delroth
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII3tjB4KYDok3KlWxdBp/yEmqhhmybd+w0VO4xUwLKKV"
+    # OatmealDome
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICAu/HTxWWR6vrEP2IgKy+sG9OT9B8/C+PE4d2U6b/Zz"
+  ];
 
   # Network configuration.
   networking.firewall.allowPing = true;
